@@ -1,9 +1,15 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {},
+  state () {
+    return {
+      daylight: ''
+    }
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    
+  },
   actions: {},
   modules: {}
 })

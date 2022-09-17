@@ -4,18 +4,29 @@
       <div class="py-1 text-2xl">
         <strong>Actual Date</strong>
       </div>
-      <div class="py-2">
-        <small>Today</small>
-      </div>
+      <div class="py-2">{{ today }}</div>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { DateTime } from 'luxon'
+import { defineComponent } from 'vue'
 
-@Options({})
-export default class ActualDateCard extends Vue {}
+const today = DateTime.now().setLocale('it-IT')
+
+export default defineComponent({
+  data() {
+    return {
+      today: today.toLocaleString({
+        weekday: 'short',
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      })
+    }
+  }
+})
 </script>
 
 <style lang="scss"></style>

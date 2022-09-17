@@ -4,9 +4,7 @@
       <div class="py-1 text-2xl">
         <strong>Actual Location</strong>
       </div>
-      <div class="py-2">
-        <small>-293 -123</small>
-      </div>
+      <div class="py-2">-293 -123</div>
     </div>
   </main>
 </template>

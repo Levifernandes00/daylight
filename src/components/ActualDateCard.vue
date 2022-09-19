@@ -18,12 +18,7 @@ const today = DateTime.now().setLocale('it-IT')
 export default defineComponent({
   data() {
     return {
-      today: today.toLocaleString({
-        weekday: 'short',
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric'
-      })
+      today: today.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
     }
   }
 })

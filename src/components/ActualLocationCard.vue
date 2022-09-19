@@ -4,16 +4,35 @@
       <div class="py-1 text-2xl">
         <strong>Actual Location</strong>
       </div>
-      <div class="py-2">-293 -123</div>
+      <div class="py-2">{{ latitude }} - {{ longitude }}</div>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 
-@Options({})
-export default class ActualLocationCard extends Vue {}
+function getLocation() {
+  return new Promise(
+    (resolve: (value: { latitude: number; longitude: number }) => void) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const { latitude, longitude } = position.coords
+          resolve({ latitude, longitude })
+        })
+      } else {
+        console.error('Geolocation is not supported by this browser.')
+      }
+    }
+  )
+}
+
+export default defineComponent({
+  async setup() {
+    const { latitude, longitude } = await getLocation()
+    return { latitude, longitude }
+  }
+})
 </script>
 
 <style lang="scss"></style>

@@ -3,12 +3,13 @@ import { createStore } from 'vuex'
 export default createStore({
   state () {
     return {
-      daylight: ''
+      location: '',
+      date: '',
     }
   },
   getters: {},
   mutations: {
-    
+
   },
   actions: {},
   modules: {}

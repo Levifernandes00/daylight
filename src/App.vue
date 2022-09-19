@@ -1,7 +1,9 @@
 <template>
-  <h1>Day light calculator</h1>
-  <ActualView />
-  <MonthsView />
+  <main class="px-5">
+    <h1>Day light calculator</h1>
+    <ActualView />
+    <MonthsView />
+  </main>
 </template>
 
 <script lang="ts">
@@ -25,6 +27,5 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

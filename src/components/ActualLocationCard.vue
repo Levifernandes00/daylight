@@ -10,6 +10,7 @@
 </template>
 
 <script lang="ts">
+import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 
 function getLocation() {
@@ -29,7 +30,9 @@ function getLocation() {
 
 export default defineComponent({
   async setup() {
+    const store = useStore()
     const { latitude, longitude } = await getLocation()
+    store.dispatch('setLocation', { latitude, longitude })
     return { latitude, longitude }
   }
 })

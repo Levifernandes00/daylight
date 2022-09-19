@@ -4,13 +4,14 @@
     <div class="px-6 py-3">
       <div class="py-1">
         <small>Day light:</small>
-        <h2>12:03:20</h2>
+        <h2>{{ daylight }}</h2>
       </div>
     </div>
   </main>
 </template>
 
 <script lang="ts">
+import { useStore } from '@/store/index'
 import { DateTime } from 'luxon'
 import { defineComponent } from 'vue'
 
@@ -18,17 +19,22 @@ export default defineComponent({
   props: {
     month: String
   },
-  data({ month }) {
+  async setup(props) {
+    const store = useStore()
     const today = DateTime.now()
-    const date = DateTime.utc(
-      today.year,
-      parseInt(month!),
-      today.day
-    ).setLocale('it-IT')
+    const date = DateTime.utc(today.year, parseInt(props.month!), today.day)
 
-    console.log(date.toISODate())
+    const { latitude, longitude } = store.state.location
+
+    const data = await fetch(
+      `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${date.toISODate()}`
+    ).then(response => response.json())
+
     return {
-      date: date.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+      date: date
+        .setLocale('it-IT')
+        .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
+      daylight: data.results['day_length']
     }
   },
   mounted() {

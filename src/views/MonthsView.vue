@@ -1,6 +1,8 @@
 <template>
   <div class="grid justify-content-center align-items-center flex-wrap mt-2">
-    <MonthCard v-for="i in 12" v-bind:key="i" :month="i.toString()" />
+    <Suspense>
+      <MonthCard v-for="i in 12" v-bind:key="i" :month="i.toString()" />
+    </Suspense>
   </div>
 </template>
 

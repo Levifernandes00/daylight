@@ -6,21 +6,9 @@
 
 <script lang="ts">
 import MonthCard from '@/components/MonthCard.vue'
-import { DateTime } from 'luxon'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  data() {
-    const today = DateTime.now()
-    const dates = [...Array(12).keys()].map(index => ({
-      year: today.year,
-      month: index + 1,
-      day: today.day
-    }))
-    return {
-      dates
-    }
-  },
   components: {
     MonthCard
   }

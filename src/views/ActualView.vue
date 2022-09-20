@@ -8,15 +8,14 @@
 <script lang="ts">
 import ActualDateCard from '@/components/ActualDateCard.vue'
 import ActualLocationCard from '@/components/ActualLocationCard.vue'
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 
-@Options({
+export default defineComponent({
   components: {
     ActualDateCard,
     ActualLocationCard
   }
 })
-export default class ActualView extends Vue {}
 </script>
 
 <style lang="scss"></style>

@@ -19,10 +19,16 @@ export default defineComponent({
   props: {
     month: String
   },
-  async setup(props) {
+  data() {
+    return {
+      date: '--',
+      daylight: '--'
+    }
+  },
+  async created() {
     const store = useStore()
     const today = DateTime.now()
-    const date = DateTime.utc(today.year, parseInt(props.month!), today.day)
+    const date = DateTime.utc(today.year, parseInt(this.month!), today.day)
 
     const { latitude, longitude } = store.state.location
 
@@ -30,12 +36,10 @@ export default defineComponent({
       `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${date.toISODate()}`
     ).then(response => response.json())
 
-    return {
-      date: date
-        .setLocale('it-IT')
-        .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY),
-      daylight: data.results['day_length']
-    }
+    this.date = date
+      .setLocale('it-IT')
+      .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+    this.daylight = data.results['day_length']
   },
   mounted() {
     this.month

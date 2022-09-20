@@ -7,17 +7,16 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 import ActualView from './views/ActualView.vue'
 import MonthsView from './views/MonthsView.vue'
 
-@Options({
+export default defineComponent({
   components: {
     ActualView,
     MonthsView
   }
 })
-export default class App extends Vue {}
 </script>
 
 <style lang="scss">

@@ -1,9 +1,7 @@
 <template>
   <div class="grid flex-wrap">
     <ActualDateCard />
-    <Suspense>
-      <ActualLocationCard />
-    </Suspense>
+    <ActualLocationCard />
   </div>
 </template>
 

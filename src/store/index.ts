@@ -16,19 +16,43 @@ export const key: InjectionKey<Store<State>> = Symbol()
 export default createStore({
   state: {
     location: {
-      latitude: 0,
-      longitude: 0
+      latitude: -1,
+      longitude: -1
     }
   },
-  getters: {},
+  getters: {
+    getLocation(state) {
+      return state.location
+    }
+  },
   mutations: {
     UPDATE_LOCATION(state, payload: Location) {
       state.location = payload
     }
   },
   actions: {
-    setLocation(context, payload: Location) {
-      context.commit('UPDATE_LOCATION', payload)
+    fetchLocation({ commit }) {
+      return new Promise((resolve: (value: Location) => void) => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords
+            commit('UPDATE_LOCATION', { latitude, longitude })
+            resolve({ latitude, longitude })
+          })
+        } else {
+          console.error('Geolocation is not supported by this browser.')
+        }
+      })
+    },
+    async fetchDaylight({ state }, date) {
+      const { latitude, longitude } = state.location
+      console.log(state.location)
+
+      const data = await fetch(
+        `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${date.toISODate()}`
+      ).then(response => response.json())
+
+      return data.results['day_length']
     }
   },
   modules: {}

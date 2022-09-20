@@ -30,16 +30,16 @@ export default defineComponent({
     const today = DateTime.now()
     const date = DateTime.utc(today.year, parseInt(this.month!), today.day)
 
-    const { latitude, longitude } = store.state.location
-
-    const data = await fetch(
-      `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${date.toISODate()}`
-    ).then(response => response.json())
-
     this.date = date
       .setLocale('it-IT')
       .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
-    this.daylight = data.results['day_length']
+
+    store.watch(
+      () => store.state.location,
+      async () => {
+        this.daylight = await store.dispatch('fetchDaylight', date)
+      }
+    )
   },
   mounted() {
     this.month

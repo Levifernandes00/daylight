@@ -4,35 +4,14 @@
       <div class="py-1 text-2xl">
         <strong>Actual Location</strong>
       </div>
-      <Suspense>
-        <template v-if="loading">
-          <spinner></spinner>
-        </template>
-
-        <template v-else>
-          <div class="py-2">{{ latitude }} - {{ longitude }}</div>
-        </template>
-      </Suspense>
+      <div class="py-2">{{ latitude }} - {{ longitude }}</div>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { Location, useStore } from '@/store'
+import { useStore } from '@/store'
 import { defineComponent } from 'vue'
-
-function getLocation() {
-  return new Promise((resolve: (value: Location) => void) => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        const { latitude, longitude } = position.coords
-        resolve({ latitude, longitude })
-      })
-    } else {
-      console.error('Geolocation is not supported by this browser.')
-    }
-  })
-}
 
 export default defineComponent({
   data() {
@@ -49,8 +28,7 @@ export default defineComponent({
   methods: {
     async getLocationData() {
       const store = useStore()
-      const location = await getLocation()
-      store.dispatch('setLocation', location)
+      const location = await store.dispatch('fetchLocation')
       return location
     }
   }

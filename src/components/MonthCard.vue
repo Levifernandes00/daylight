@@ -15,9 +15,11 @@ import { useStore } from '@/store/index'
 import { DateTime } from 'luxon'
 import { defineComponent } from 'vue'
 
+type PropsDate = { year: number; month: number; day: number }
+
 export default defineComponent({
   props: {
-    month: String
+    cardDate: Object
   },
   data() {
     return {
@@ -26,8 +28,7 @@ export default defineComponent({
     }
   },
   async created() {
-    const today = DateTime.now()
-    const date = DateTime.utc(today.year, parseInt(this.month!), today.day)
+    const date = this.cardDate as DateTime
     this.setDate(date)
     this.setDaylight(date)
   },
@@ -46,9 +47,6 @@ export default defineComponent({
         }
       )
     }
-  },
-  mounted() {
-    this.month
   }
 })
 </script>

@@ -26,20 +26,26 @@ export default defineComponent({
     }
   },
   async created() {
-    const store = useStore()
     const today = DateTime.now()
     const date = DateTime.utc(today.year, parseInt(this.month!), today.day)
-
-    this.date = date
-      .setLocale('it-IT')
-      .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
-
-    store.watch(
-      () => store.state.location,
-      async () => {
-        this.daylight = await store.dispatch('fetchDaylight', date)
-      }
-    )
+    this.setDate(date)
+    this.setDaylight(date)
+  },
+  methods: {
+    setDate(date: DateTime) {
+      this.date = date
+        .setLocale('it-IT')
+        .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+    },
+    setDaylight(date: DateTime) {
+      const store = useStore()
+      store.watch(
+        () => store.state.location,
+        async () => {
+          this.daylight = await store.dispatch('fetchDaylight', date)
+        }
+      )
+    }
   },
   mounted() {
     this.month

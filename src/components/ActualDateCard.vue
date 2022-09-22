@@ -13,12 +13,20 @@
 import { DateTime } from 'luxon'
 import { defineComponent } from 'vue'
 
-const today = DateTime.now().setLocale('it-IT')
-
 export default defineComponent({
   data() {
     return {
-      today: today.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+      today: ''
+    }
+  },
+  created() {
+    this.setToday()
+  },
+  methods: {
+    setToday() {
+      this.today = DateTime.now()
+        .setLocale('it-IT')
+        .toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
     }
   }
 })

@@ -1,10 +1,10 @@
 <template>
   <main class="bg-white shadow-1 border-round flex-grow-1 p-2 m-1">
-    <h3>{{ date }}</h3>
+    <h3 id="date">{{ date }}</h3>
     <div class="px-6 py-3">
       <div class="py-1">
         <small>Day light:</small>
-        <h2>{{ daylight }}</h2>
+        <h2 id="daylight">{{ daylight }}</h2>
       </div>
     </div>
   </main>
@@ -14,8 +14,6 @@
 import { useStore } from '@/store/index'
 import { DateTime } from 'luxon'
 import { defineComponent } from 'vue'
-
-type PropsDate = { year: number; month: number; day: number }
 
 export default defineComponent({
   props: {
@@ -27,7 +25,7 @@ export default defineComponent({
       daylight: '--'
     }
   },
-  async created() {
+  created() {
     const date = this.cardDate as DateTime
     this.setDate(date)
     this.setDaylight(date)

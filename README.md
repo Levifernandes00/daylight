@@ -98,7 +98,7 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -108,7 +108,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Levi Fernandes - [![LinkedIn][linkedin-shield]][linkedin-url] - levi.o.fernandes@outlook.com
+Levi de Oliveira Fernandes - levi.o.fernandes@outlook.com - [![LinkedIn][linkedin-shield]][linkedin-url]
 
 Project Link: [https://github.com/Levifernandes00/daylight.git](https://github.com/Levifernandes00/daylight.git)
 

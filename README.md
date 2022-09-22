@@ -49,8 +49,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+![Product Screenshot][product-screenshot]
 It is a project showing the day length of each month on today's date.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -139,7 +138,7 @@ Project Link: [https://github.com/Levifernandes00/daylight.git](https://github.c
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/levi-fernandes-00/?locale=en_US
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: public/img/screenshot.png
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

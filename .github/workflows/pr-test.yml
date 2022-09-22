@@ -1,7 +1,7 @@
 name: Pull Request Test
 on: [pull_request]
 jobs:
-  check-bats-version:
+  pull-request-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

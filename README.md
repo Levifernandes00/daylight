@@ -49,8 +49,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+![Product Screenshot][product-screenshot]
 It is a project showing the day length of each month on today's date.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,7 +98,7 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -109,7 +108,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Levi Fernandes - [![LinkedIn][linkedin-shield]][linkedin-url] - levi.o.fernandes@outlook.com
+Levi de Oliveira Fernandes - levi.o.fernandes@outlook.com - [![LinkedIn][linkedin-shield]][linkedin-url]
 
 Project Link: [https://github.com/Levifernandes00/daylight.git](https://github.com/Levifernandes00/daylight.git)
 
@@ -139,7 +138,7 @@ Project Link: [https://github.com/Levifernandes00/daylight.git](https://github.c
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/levi-fernandes-00/?locale=en_US
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: public/img/screenshot.png
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

@@ -16,7 +16,7 @@ VueWrapper {
         <h3
           id="date"
         >
-          gio 22 set 2022
+          gio 9 giu 2022
         </h3>
         <div
           class="px-6 py-3"
@@ -160,8 +160,8 @@ VueWrapper {
       "proxy": Object {},
       "refs": Object {
         "VTU_COMPONENT": Object {
-          "cardDate": "2022-09-22T15:54:35.858+02:00",
-          "date": "gio 22 set 2022",
+          "cardDate": "2022-06-09T00:00:00.000Z",
+          "date": "gio 9 giu 2022",
           "daylight": "12:18:32",
           "hasOwnProperty": [Function],
           "setDate": [Function],
@@ -270,8 +270,8 @@ VueWrapper {
           "c": null,
           "components": Object {},
           "ctx": Object {
-            "cardDate": "2022-09-22T15:54:35.858+02:00",
-            "date": "gio 22 set 2022",
+            "cardDate": "2022-06-09T00:00:00.000Z",
+            "date": "gio 9 giu 2022",
             "daylight": "12:18:32",
             "hasOwnProperty": [Function],
             "setDate": [Function],
@@ -279,7 +279,7 @@ VueWrapper {
           },
           "da": null,
           "data": Object {
-            "date": "gio 22 set 2022",
+            "date": "gio 9 giu 2022",
             "daylight": "12:18:32",
           },
           "directives": null,
@@ -314,7 +314,7 @@ VueWrapper {
           "next": null,
           "parent": [Circular],
           "props": Object {
-            "cardDate": "2022-09-22T15:54:35.858+02:00",
+            "cardDate": "2022-06-09T00:00:00.000Z",
           },
           "propsDefaults": Object {},
           "propsOptions": Array [
@@ -329,8 +329,8 @@ VueWrapper {
           ],
           "provides": Object {},
           "proxy": Object {
-            "cardDate": "2022-09-22T15:54:35.858+02:00",
-            "date": "gio 22 set 2022",
+            "cardDate": "2022-06-09T00:00:00.000Z",
+            "date": "gio 9 giu 2022",
             "daylight": "12:18:32",
             "hasOwnProperty": [Function],
             "setDate": [Function],
@@ -380,7 +380,7 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
-                "children": "gio 22 set 2022",
+                "children": "gio 9 giu 2022",
                 "component": null,
                 "dirs": null,
                 "dynamicChildren": null,
@@ -388,7 +388,7 @@ VueWrapper {
                 "el": <h3
                   id="date"
                 >
-                  gio 22 set 2022
+                  gio 9 giu 2022
                 </h3>,
                 "key": null,
                 "patchFlag": 1,
@@ -539,7 +539,7 @@ VueWrapper {
                 "__v_skip": true,
                 "anchor": null,
                 "appContext": null,
-                "children": "gio 22 set 2022",
+                "children": "gio 9 giu 2022",
                 "component": null,
                 "dirs": null,
                 "dynamicChildren": null,
@@ -547,7 +547,7 @@ VueWrapper {
                 "el": <h3
                   id="date"
                 >
-                  gio 22 set 2022
+                  gio 9 giu 2022
                 </h3>,
                 "key": null,
                 "patchFlag": 1,
@@ -608,7 +608,7 @@ VueWrapper {
               <h3
                 id="date"
               >
-                gio 22 set 2022
+                gio 9 giu 2022
               </h3>
               <div
                 class="px-6 py-3"
@@ -676,7 +676,7 @@ VueWrapper {
           <h3
             id="date"
           >
-            gio 22 set 2022
+            gio 9 giu 2022
           </h3>
           <div
             class="px-6 py-3"
@@ -698,7 +698,7 @@ VueWrapper {
         "key": null,
         "patchFlag": 0,
         "props": Object {
-          "cardDate": "2022-09-22T15:54:35.858+02:00",
+          "cardDate": "2022-06-09T00:00:00.000Z",
           "ref": "VTU_COMPONENT",
         },
         "ref": Object {
@@ -787,7 +787,7 @@ VueWrapper {
           <h3
             id="date"
           >
-            gio 22 set 2022
+            gio 9 giu 2022
           </h3>
           <div
             class="px-6 py-3"
@@ -849,8 +849,8 @@ VueWrapper {
   },
   "__setProps": [Function],
   "componentVM": Object {
-    "cardDate": "2022-09-22T15:54:35.858+02:00",
-    "date": "gio 22 set 2022",
+    "cardDate": "2022-06-09T00:00:00.000Z",
+    "date": "gio 9 giu 2022",
     "daylight": "12:18:32",
     "hasOwnProperty": [Function],
     "setDate": [Function],
@@ -864,7 +864,7 @@ VueWrapper {
     <h3
       id="date"
     >
-      gio 22 set 2022
+      gio 9 giu 2022
     </h3>
     <div
       class="px-6 py-3"

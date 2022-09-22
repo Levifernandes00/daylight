@@ -6,7 +6,7 @@ const position = { latitude: 45.6141484, longitude: 8.777796 }
 
 const expectedDaylight = '12:18:32'
 
-const date = DateTime.now()
+const date = DateTime.utc(2022, 6, 9)
 
 const expectedDateString = date
 .setLocale('it-IT')

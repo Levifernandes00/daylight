@@ -46,7 +46,6 @@ export default createStore({
     },
     async fetchDaylight({ state }, date) {
       const { latitude, longitude } = state.location
-      console.log(state.location)
 
       const data = await fetch(
         `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${date.toISODate()}`

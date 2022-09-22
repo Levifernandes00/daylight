@@ -10,4 +10,4 @@ jobs:
           node-version: '16'
       - run: yarn
       - run: yarn lint
-      - run: yarn jest
+      - run: yarn test:unit
